@@ -23,7 +23,7 @@ class BaseClassifierConcurrent(ABC):
     """Base class for concurrent agent classifiers"""
 
     @abstractmethod
-    def classify(self, message: str, thread_id: Optional[str] = None, available_agents: List[AgentInfo] = None) -> list[str]:
+    def classify(self, message: str, thread_id: Optional[str] = None, available_agents: List[AgentInfo] = None) -> List[str]:
         """
         Classify a message and return the appropriate agent names.
         
