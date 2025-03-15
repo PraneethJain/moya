@@ -1,3 +1,6 @@
+.venv
+source.sh
+
 # Byte-compiled
 __pycache__/
 
