@@ -18,3 +18,18 @@ class BaseClassifier(ABC):
         :return: Selected agent name
         """
         pass
+
+class BaseClassifierConcurrent(ABC):
+    """Base class for concurrent agent classifiers"""
+
+    @abstractmethod
+    def classify(self, message: str, thread_id: Optional[str] = None, available_agents: List[AgentInfo] = None) -> list[str]:
+        """
+        Classify a message and return the appropriate agent names.
+        
+        :param message: The user message to classify
+        :param thread_id: Optional thread ID for context
+        :param available_agents: List of available agent names to choose from
+        :return: Selected agent names
+        """
+        pass
