@@ -101,6 +101,13 @@ class Agent(abc.ABC):
         self.is_tool_caller = config.is_tool_caller
         self.is_streaming = config.is_streaming
         
+    def add_tool(self, tool: BaseTool):
+        """
+        Adds a new tool to the agent's tool registry
+
+        :param tool: The tool to add.
+        """
+        self.tool_registry.register_tool(tool)
 
     @abc.abstractmethod
     def handle_message(self, message: str, **kwargs) -> str:
