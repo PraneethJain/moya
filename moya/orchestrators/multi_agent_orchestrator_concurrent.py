@@ -46,7 +46,7 @@ class MultiAgentOrchestratorConcurrent(BaseOrchestrator):
 
         all_responses = []
         current_message = user_message
-        max_iterations = 20
+        max_iterations = 5
         available_agents = self.agent_registry.list_agents()
         if not available_agents:
             return "[No agents available to handle message.]"
